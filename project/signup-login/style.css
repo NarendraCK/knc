@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: aliceblue;
+	color: #395693;
+}
+.container {
+	height: 100vh;
+	margin: 0vh 3vw;
+	background-color: antiquewhite;
+}
+/*  <====== HEADER ==========>    */
+.header {
+	height: 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+}
+.logo {
+	font-size: 4vw;
+	font-weight: bold;
+	color: whitesmoke;
+}
+
+button {
+	font-size: 2.5vw;
+	margin: 0 1vh;
+	text-align: center;
+	padding: 0.5vh 1vw 1vh;
+	background-color: black;
+	opacity: 0.9;
+	border-color: black;
+	background-color: hsl(0, 0%, 5%);
+	color: #1773ea;
+	font-weight: 550;
+	border-radius: 5px;
+}
+button:hover {
+	background-color: #395693;
+	color: whitesmoke;
+}
+.buttons {
+	background-color: black;
+	padding-right: 3vw;
+}
+.main {
+	height: 75%;
+}
+.section {
+	display: flex;
+	height: 30%;
+	align-items: center;
+	color: #395693;
+	padding: 0 2vw;
+	font-size: 1.5vw;
+	font-weight: 400;
+}
+.table {
+	height: 70%;
+	display: flex;
+	flex-direction:column ;
+	justify-content: space-evenly;
+	align-content: baseline;
+
+}
+.row1,.row2,.row3{
+	display: flex;
+	justify-content: space-around;
+	align-content: baseline;
+	
+}
+
+.th {
+	font-size: 3vw;
+	font-weight: bold;
+	margin-left: 2vw;
+}
+span {
+	font-size: 2vw;
+	margin-right: 2vw;
+}
+/* <============footer=============> */
+.footer {
+	display: flex;
+	height: 10%;
+	background-color: #395693;
+	color: whitesmoke;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 2.5vw;
+}
+@media screen and (max-width: 850px) {
+	.container {
+		margin: 0;
+	}
+	.logo {
+		width: 100%;
+		font-size: 4vh;
+	}
+	span {
+		font-size: 3vh;
+	}
+	.buttons {
+		padding: 0;
+		align-items: center;
+	}
+	button,
+	.footer {
+		font-size: 3vh;
+	}
+	.section {
+		padding: 0;
+		font-size: 2vh;
+		text-align: center;
+	}
+	section {
+		text-align: justify;
+		padding: 0 5px;
+	}
+	.row1,
+	.row2,
+	.row3 {
+		flex-direction: column;
+		margin: 0;
+		align-items: stretch;
+		padding: 0;
+		border: none;
+		margin-top: 10px;
+		flex: 3;
+	}
+
+	.th {
+		font-size: 3vh;
+		margin-left: 0;
+	}
+	span {
+		font-size: 2vh;
+		display: flex;
+		flex: 2;
+	}
+}

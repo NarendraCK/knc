@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registration Form</title>
+		<link href="http://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
+
+		<link rel="stylesheet" href="ls.css" />
+	</head>
+	<body>
+		<form id="registerForm" onfocusout="myFunction()" method="post">
+			<section>
+				<div
+					id="invalid"
+					style="
+						position: -webkit-sticky;
+						position: sticky;
+						top: 0;
+						padding-top: 5px;
+					"
+				></div>
+
+				<div class="container">
+					<form id="form">
+						<div class="form-group" id="fn">
+							<label for="firstname"> First Name </label>
+							<input
+								type="text"
+								placeholder="First Name"
+								name="firstname"
+								id="firstname"
+								required
+								autocomplete="off"
+							/>
+						</div>
+
+						<div class="form-group" id="ln">
+							<label for="lastname"> Last Name </label>
+							<input
+								type="text"
+								placeholder="Last Name"
+								name="lastname"
+								id="lastname"
+								required
+								autocomplete="off"
+							/>
+						</div>
+
+						<div class="form-group" id="el">
+							<label for="email">Email </label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email"
+								required
+								autocomplete="off"
+							/>
+						</div>
+						<div class="form-group" id="un">
+							<label for="username"> Username </label>
+							<input
+								type="text"
+								name="username"
+								id="username"
+								placeholder="Username"
+								required
+								autocomplete="off"
+							/>
+						</div>
+						<div class="form-group" id="pw">
+							<label for="password">Password </label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<div class="form-group" id="ad">
+							<label for="address">Address </label>
+							<textarea
+								name="address"
+								id="address"
+								cols="30"
+								rows="7"
+								placeholder="House.No,Street-name,
+								locality(postTo),Mandal,
+								District,State,
+								Pin-code:___"
+								required
+							></textarea>
+						</div>
+						<div class="form-group">
+							<label for="gender" required=""> Gender </label>
+							<div class="radio" style="cursor: pointer">
+								<input
+									type="radio"
+									name="gender"
+									id="male"
+									value="male"
+									required
+								/>
+								<label for="male" style="cursor: pointer">Male</label>
+								<input
+									type="radio"
+									name="gender"
+									id="female"
+									value="female"
+									required
+								/>
+								<label for="female" style="cursor: pointer">Female</label>
+								<input
+									type="radio"
+									name="gender"
+									id="other"
+									value="other"
+									required
+								/>
+								<label for="other" style="cursor: pointer">Other</label><br />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="date" id="dob">Date Of Birth </label>
+							<input
+								type="date"
+								name="date"
+								id="date"
+								required
+								style="cursor: pointer"
+							/><br />
+						</div>
+						<div class="form-group" id="pn">
+							<label for="phonenumber">Phone Number </label>
+							<input
+								type="number"
+								name="phonenumber"
+								id="phonenumber"
+								placeholder="Phone-number"
+								required
+								autocomplete="off"
+							/>
+						</div>
+						<div class="form-group">
+							<button id="button" class="button">
+								<span>submit</span>
+							</button>
+						</div>
+					</form>
+				</div>
+				<div id="status"></div>
+			</section>
+		</form>
+		<script src="index.js"></script>
+	</body>
+</html>

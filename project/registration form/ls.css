@@ -1,0 +1,193 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'cascadia code';
+	color: coral;
+}
+section {
+	height: 100%;
+	width: 100%;
+	background-color: aliceblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container {
+	width: 90%;
+	max-width: 500px;
+	margin: 0px 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 20px #00000010;
+	background-color: azure;
+	margin-bottom: 20px;
+}
+.form-group {
+	width: 100%;
+	margin-top: 20px;
+	font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 20px;
+	font-size: 15px;
+	border-radius: 10px;
+}
+input {
+	border: 1px solid bisque;
+	outline: none;
+	margin-top: 5px;
+}
+textarea {
+	border: 1px solid bisque;
+	outline: none;
+	resize: vertical;
+}
+input:focus {
+	border: 2px solid rgb(245, 146, 26);
+}
+textarea:focus {
+	border: 2px solid rgb(245, 146, 26);
+}
+
+.radio input[type='radio'] {
+	display: none; /*removes original button*/
+}
+
+.radio label {
+	position: relative;
+	display: inline-block;
+}
+
+.radio label:before {
+	content: ' ';
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	margin: 0 5px 0 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid bisque;
+	background-color: transparent;
+
+	transition: 700ms;
+}
+
+.radio input[type='radio']:checked + label::before {
+	position: relative;
+	border: 2px solid rgb(245, 146, 26);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	content: ' ';
+	display: inline-block;
+	background-color: rgb(245, 146, 26);
+}
+#submit {
+	font-family: 'cascadia code';
+	font-size: 30px;
+	color: coral;
+	width: 50%;
+}
+#date {
+	font-family: 'cascadia code';
+	font-size: 15px;
+	color: coral;
+	width: 60%;
+}
+#date:hover {
+	background-color: rgb(253, 194, 106);
+	color: floralwhite;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+	display: none;
+}
+.button {
+	width: 100%;
+	font-family: 'cascadia code';
+	color: coral;
+	border: 1px solid bisque;
+	border-radius: 10px;
+	padding: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all 100ms;
+}
+.button:hover {
+	border-color: rgb(245, 146, 26);
+	background-color: rgb(245, 146, 26);
+	color: floralwhite;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: '\21A3';
+	color: floralwhite;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+#status {
+	width: 90;
+	max-width: 500px;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 10px;
+	font-size: 20px;
+}
+.success {
+	color: floralwhite;
+	background-color: rgb(12, 247, 168);
+	animation: status 4s ease forwards;
+}
+.failure {
+	color: floralwhite;
+	background-color: firebrick;
+	animation: status 4s ease forwards;
+}
+@keyframes status {
+	0% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	90% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	100% {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.chow {
+	font-size: x-small;
+}
